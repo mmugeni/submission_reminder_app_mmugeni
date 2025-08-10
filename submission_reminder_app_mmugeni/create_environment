@@ -12,14 +12,14 @@ mkdir -p "$DIR_NAME/config" "$DIR_NAME/modules" "$DIR_NAME/assets"
 # Create image.png placeholder
 echo "[Placeholder for image.png]" > "$DIR_NAME/image.png"
 
-# Create config/config.env (provided content)
+# Create config/config.env
 cat > "$DIR_NAME/config/config.env" << 'EOF'
 # This is the config file
 ASSIGNMENT="Shell Navigation"
 DAYS_REMAINING=2
 EOF
 
-# Create modules/functions.sh (provided content)
+# Create modules/functions.sh
 cat > "$DIR_NAME/modules/functions.sh" << 'EOF'
 #!/bin/bash
 # Function to read submissions file and output students who have not submitted
@@ -42,7 +42,7 @@ function check_submissions {
 EOF
 chmod +x "$DIR_NAME/modules/functions.sh"
 
-# Create assets/submissions.txt (provided + 5 more)
+# Create assets/submissions.txt 
 cat > "$DIR_NAME/assets/submissions.txt" << 'EOF'
 student, assignment, submission status
 Chinemerem, Shell Navigation, not submitted
@@ -57,7 +57,7 @@ Jean, Git, submitted
 Aisha, Shell Basics, not submitted
 EOF
 
-# Create reminder.sh (provided content)
+# Create reminder.sh 
 cat > "$DIR_NAME/reminder.sh" << 'EOF'
 #!/bin/bash
 # Source environment variables and helper functions
@@ -75,7 +75,7 @@ check_submissions $submissions_file
 EOF
 chmod +x "$DIR_NAME/reminder.sh"
 
-# Create startup.sh (your implementation)
+# Create startup.sh 
 cat > "$DIR_NAME/startup.sh" << 'EOF'
 #!/bin/bash
 echo "Starting the Submission Reminder App..."
